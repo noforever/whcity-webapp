@@ -1,0 +1,105 @@
+/* CSS Document */
+body,html{width: 100%;height: 100%;min-width: 320px;min-height: 480px;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,textarea,p,blockquote,th,td,iframe {margin:0;padding:0;}
+body{-webkit-tap-highlight-color:rgba(0,0,0,0);color: #333;}
+img {border:0;}
+ol,ul,li {list-style:none;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+a{ text-decoration:none; cursor:pointer}
+a{color:#333333}
+a:hover {color:#538e97;}
+input,button{outline:none;}
+/**/
+
+
+/*每块背景和偏移样式*/
+body{
+  background-color: #000A38;
+  background-image:url('../../../static/img/main_img.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.chart_main{
+  margin-top: 7vh;
+}
+.h1{height: 4vh}
+.h2{height: 8vh}
+.h2_5{height: 12vh}
+.h3{height: 12vh}
+.h3_5{height: 14vh}
+.h4{height: 16vh}
+.h5{height: 20vh}
+.h6{height: 24vh}
+.h7{height: 28vh}
+.h8{height: 32vh}
+.h9{height: 36vh}
+.h10{height: 40vh}
+.h11{height: 44vh}
+.h12{height: 48vh}
+.h13{height: 52vh}
+.h14{height: 56vh}
+.h15{height: 60vh}
+.h16{height: 64vh}
+.h17{height: 68vh}
+.h18{height: 72vh}
+.h19{height: 76vh}
+.h20{height: 80vh}
+.h21{height: 84vh}
+.h22{height: 88vh}
+.h23{height: 92vh}
+.h24{height: 96vh}
+
+.pop_col_tit {
+  padding-left: 5vh;
+  position: relative;
+  height: 4vh;
+  line-height: 4vh;
+  padding-top: 1vh;
+}
+.pop_col_tit h3 {
+  font-size: 2vh;
+  color: #a9b2d4;
+  font-weight: bold;
+  line-height: 4vh;
+}
+.tit_icon {
+  width: 3.6vh;
+  height: 3.6vh;
+  display: inline-block;
+  position: absolute;
+  top:1vh;
+  left: 1vh;
+  z-index: 1;
+}
+.icon-tit-line { background: url("../../../static/img/icon-tit-line.svg") no-repeat 100%;}
+._tit h4::before{
+  width: 10px;
+  content:"|";
+  border-radius: 2px;
+  color: red;
+  margin-right: 5px;
+  background-color: red;
+  margin-top: 0px;
+}
+._tit h4{
+  width: 100%;
+  height: 4vh;
+  text-align: left;
+  font-weight: bold;
+  color: #0391F3;
+  font-size: 2vh;
+  margin-left: 2vh;
+  line-height: 5vh;
+}
+.chart{
+  height: 100%;
+  width: 100%;
+}
+
+/*Elementui 调整*/
+.el-switch__label{-webkit-transition:.2s;transition:.2s;font-size:2.3vh;font-weight:500;vertical-align:middle;color:#AFB8D2}
+.el-switch__label *{line-height: 0; font-size:2.3vh!important;display:inline-block}
+.el-switch__input{position:absolute;width:0;height:0;opacity:0;margin:0}
+.el-switch__core{margin:0;position:relative;width:7vh!important;height:3vh!important;border:1px solid #DCDFE6;outline:0;border-radius:3vh!important;-webkit-box-sizing:border-box;box-sizing:border-box;background:#DCDFE6;-webkit-transition:border-color .3s,background-color .3s;transition:border-color .3s,background-color .3s;vertical-align:middle}
+.el-switch__core:after{content:"";position:absolute;top:0.1vh!important;left:0.1vh!important;border-radius:100%;-webkit-transition:all .3s;transition:all .3s;width:2.6vh!important;height:2.6vh!important;background-color:#FFF}
+.el-switch.is-checked .el-switch__core::after{left:100%;margin-left:4vh!important;}
