@@ -21,5 +21,16 @@ export default new Router({
         },
       ]
     },
+      {
+          path:'/industrial-development',
+          component: BaseLayout,
+          children:[
+              {
+                  name:'industrial-development',
+                  path:'/industrial-development',
+                  component:resolve => require(['@/page/industrial-development'], resolve)
+              },
+          ]
+      },
   ]
 })

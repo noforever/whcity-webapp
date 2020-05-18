@@ -7,7 +7,7 @@ import ElementUI from 'element-ui'
 import  'echarts/theme/macarons.js'
 import httpRequest from './utils/httpRequest'
 import './utils/common'
-import '@/component/_globals'
+
 import "font-awesome/css/font-awesome.min.css"
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/style/index.scss'
