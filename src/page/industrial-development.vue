@@ -244,7 +244,7 @@
                         show: true,
                         map: 'wuhan',
                         aspectScale: 1,
-                        zoom: 1,
+                        zoom: 1.2,
                         center: [114.300078, 30.61749],
                         label: {
                             normal: {
@@ -308,7 +308,7 @@
                             type: 'effectScatter',
                             coordinateSystem: 'geo',
                             symbol: 'image://'+it_up,
-                            symbolSize: config().fontSize*1.2,
+                            symbolSize: [config().fontSize,config().fontSize*1.5],
                             itemStyle: {
                                 normal: {
                                     color: '#FFF100'
@@ -322,7 +322,7 @@
                             type: 'effectScatter',
                             coordinateSystem: 'geo',
                             symbol: 'image://'+it_center,
-                            symbolSize: config().fontSize*1.2,
+                            symbolSize: [config().fontSize,config().fontSize*1.5],
                             itemStyle: {
                                 normal: {
                                     color: '#FFF100'
@@ -336,7 +336,7 @@
                             type: 'effectScatter',
                             coordinateSystem: 'geo',
                             symbol: 'image://'+it_down,
-                            symbolSize: config().fontSize*1.2,
+                            symbolSize: [config().fontSize,config().fontSize*1.5],
                             itemStyle: {
                                 normal: {
                                     color: '#FFF100'
@@ -792,7 +792,7 @@
                             }
                         }
                         .tltleBox {
-                            border-bottom: 0.1vh #fff solid;
+                            border-bottom: 1px #bbbaba solid;
                             span {
                                 padding-left: 3vh;
                             }
@@ -843,15 +843,18 @@
         }
         .it_main {
             border: 1px #426380 solid;
-            background: linear-gradient(to left, #2fa6f6, #2fa6f6) left top no-repeat,
-            linear-gradient(to bottom, #2fa6f6, #2fa6f6) left top no-repeat,
-            linear-gradient(to left, #2fa6f6, #2fa6f6) right top no-repeat,
-            linear-gradient(to bottom, #2fa6f6, #2fa6f6) right top no-repeat,
-            linear-gradient(to left, #2fa6f6, #2fa6f6) left bottom no-repeat,
-            linear-gradient(to bottom, #2fa6f6, #2fa6f6) left bottom no-repeat,
-            linear-gradient(to left, #2fa6f6, #2fa6f6) right bottom no-repeat,
-            linear-gradient(to left, #2fa6f6, #2fa6f6) right bottom no-repeat;
-            background-size: 1px 2vh, 2vh 1px, 1px 2vh, 2vh 1px;
+            background: linear-gradient(to left, #fff, #fff) left top no-repeat,
+            linear-gradient(to bottom, #fff, #fff) left top no-repeat,
+            linear-gradient(to left, #fff, #fff) right top no-repeat,
+            linear-gradient(to bottom, #fff, #fff) right top no-repeat,
+            linear-gradient(to left, #fff, #fff) left bottom no-repeat,
+            linear-gradient(to bottom, #fff, #fff) left bottom no-repeat,
+            linear-gradient(to left, #fff, #fff) right bottom no-repeat,
+            linear-gradient(to left, #fff, #fff) right bottom no-repeat;
+            background-size: 2px 2vh, 3vh 1.5px, 2px 2vh, 3vh 1.5px;
+            /*background-image: url('../../static/img/industrial/bk.png');*/
+            /*background-repeat: no-repeat;*/
+            /*background-size: 100% 100%;*/
         }
         .it_main_l {
             margin: 0 1% 0 2%;
