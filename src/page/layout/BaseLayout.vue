@@ -67,7 +67,7 @@
                     {title: '空间规划', path: ''},
                     {title: '城市治理', path: ''},
                     {title: '城市服务', path: ''},
-                    {title: '产业发展', path: '/industrial-development'},
+                    {title: '产业发展', path: '/car-development'},
                 ],
                 navIndex: 0,
                 title: '宏观经济运行',
@@ -92,29 +92,38 @@
                 for (let i = 0; i < this.nav.length; i++) {
                     if (this.nav[i].path == this.$route.path) {
                         this.navIndex = i;
-                        this.title = this.nav[i].title
+                    }
+                    if(this.$route.path == '/industrial-development'){
+                        this.navIndex = 6;
                     }
                 }
                 //return s;
             },
-            // checkRouterLocal(path) {
-            //   // 查找当前路由下标高亮
-            //   this.navIndex = this.nav.findIndex(item => item.path === path);
-            //   console.log(path,"path")
-            // },
+            checkRouterLocal(path) {
+                for (let i = 0; i < this.nav.length; i++) {
+                    if (this.nav[i].path == path) {
+                        this.navIndex = i;
+                    }
+                    if(path == '/industrial-development'){
+                        this.navIndex = 6;
+                    }
+                }
+               //this. currentPage()
+
+             //console.log(path,"path")
+            },
 
 
         },
         watch: {
-            // "$route"() {
-            //     let path = this.$route.path;
-            //   alert(path)
-            //     // 检索当前路径
-            //     this.checkRouterLocal(path);
-            // }
+            "$route"() {
+                let path = this.$route.path;
+                // 检索当前路径
+                this.checkRouterLocal(path);
+            }
         },
         mounted() {
-            //this.currentPage()
+            this.currentPage()
         },
     }
 </script>

@@ -10,7 +10,7 @@ var config = function (){
     "fontSize":fz,//坐标轴字体大小
     "textStyle":{
       fontSize: fz,
-      color:'#fff'
+      color:'#fff',
   },
     "lineStyle":{
       color: '#fff',

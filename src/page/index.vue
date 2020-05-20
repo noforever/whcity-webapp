@@ -202,8 +202,9 @@
         data() {
             return {
                 btn1: 1,
-                btn2:1,
+                btn2:2,
                 line_act: 0,
+
                 img_url: car,
                 map_ind: 0,
                 dateList: [{id: 0, date: '2016'}, {id: 1, date: '2017'}, {id: 2, date: '2018'}, {id: 3, date: '2019'}, {id: 4, date: '2020'}],
@@ -278,7 +279,7 @@
                         left: 'center',
                         textStyle: {
                             color: '#fff',
-                            fontSize: config().fontSize * 2
+                            fontSize: config().fontSize * 1.77777738
                         }
                     },
                     "color": ["#fff", 'rgba(255,255,255,.5)', 'rgba(255,255,255,.2)'],
@@ -467,17 +468,22 @@
             left_chart1() {
                 var chart = echarts.init(document.getElementById('left_chart1'));
                 var option = {
-
                     tooltip: {
                         trigger: 'item',
                         formatter: "{b} : {c} ({d}%)"
                     },
                     legend: {
                         orient: 'vertical',
-                        top: "middle",
-                        right: "5%",
-                        textStyle: config().textStyle,
                         icon: 'circle',
+                        right:'3%',
+                        top:'30%',
+                        itemGap: config().fontSize,
+                        itemWidth: config().fontSize,
+                        itemHeight: config().fontSize,
+                        textStyle: {
+                            color:'#8CD1FA',
+                            fontSize:config().fontSize
+                        },
                         data: ['第一产业', '第二产业', '第三产业'],
                     },
                     series: [{
@@ -531,7 +537,10 @@
                                 formatter: function (val) {
                                     return val.percent + '%'
                                 },
-                                textStyle:config().textStyle
+                                textStyle:{
+                                    color:'#fff',
+                                    fontSize:config().fontSize
+                                }
                             }
                         },
                         labelLine: {
@@ -569,7 +578,10 @@
                         top:'3%',
                         itemWidth: config().fontSize,
                         itemHeight: config().fontSize,
-                        textStyle: config().textStyle,
+                        textStyle: {
+                            color:'#8CD1FA',
+                            fontSize:config().fontSize
+                        },
                         data: ['第一产业','第二产业','第三产业',],
                     },
                     grid: {
@@ -616,6 +628,7 @@
                         axisTick: {
                             show: false
                         },
+                        splitNumber:5,
                         splitLine: {
                             show: true,
                             lineStyle: {
@@ -776,7 +789,10 @@
                         top:'3%',
                         itemWidth: config().fontSize,
                         itemHeight: config().fontSize,
-                        textStyle: config().textStyle,
+                        textStyle: {
+                            color:'#8CD1FA',
+                            fontSize:config().fontSize
+                        },
                         data: ['大型企业','中型企业','小型企业'],
                     },
                     grid: {
@@ -934,17 +950,20 @@
                         trigger: 'axis',
                     },
                     legend: {
-                        type: 'scroll',
+                        //type: 'scroll',
                         icon: 'circle',
                         left:'3%',
                         top:'3%',
                         itemWidth: config().fontSize,
                         itemHeight: config().fontSize,
-                        textStyle: config().textStyle,
+                        textStyle: {
+                            color:'#8CD1FA',
+                            fontSize:config().fontSize
+                        },
                         data: ['新订单指数','原材料库存指数','供应商配送时间指数','生产指数','从业人员指数'],
                     },
                     grid: {
-                        top: '22%',
+                        top: '32%',
                         left: '1%',
                         right: '1%',
                         bottom: '6%',
@@ -1146,7 +1165,10 @@
                         top:'3%',
                         itemWidth: config().fontSize,
                         itemHeight: config().fontSize,
-                        textStyle: config().textStyle,
+                        textStyle: {
+                            color:'#8CD1FA',
+                            fontSize:config().fontSize
+                        },
                         data: ['制造业','非制造业'],
                     },
                     grid: {
@@ -1477,7 +1499,7 @@
                     width: 50%;
                     line-height: 5vh;
                     text-align: left;
-                    font-size: 2.3vh;
+                    font-size: 2.314815vh;
                     color: #fff;
                     font-weight: 700;
                 }
@@ -1494,7 +1516,7 @@
                         height: 100%;
                         line-height: 3vh;
                         text-align: center;
-                        font-size: 1.8vh;
+                        font-size: 1.851852vh;
                         color: #0696FC;
                         cursor: pointer;
                     }
@@ -1515,7 +1537,7 @@
             .sub_title {
                 line-height: 2vh;
                 margin-top: 1vh;
-                font-size: 1.8vh;
+                font-size: 1.851852vh;
                 text-align: center;
                 color: #ffffff;
                 font-weight: 600;
@@ -1560,7 +1582,7 @@
                 div {
                     width: 50%;
                     line-height: 3vh;
-                    font-size: 2vh;
+                    font-size: 2.037037vh;
                     text-align: center;
                     color: #fff;
                     font-weight: 600;
@@ -1602,8 +1624,8 @@
                 width: 92%;
                 margin-left: 4%;
                 .right_chart1_tit {
-                    width: 41%;
-                    font-size: 2vh;
+                    width: 36%;
+                    font-size: 1.851852vh;
                     line-height: 4.5vh;
                 }
                 span:nth-child(2) {
@@ -1614,7 +1636,7 @@
                 .tit_up {
                     color: rgba(18, 214, 97, 1);
                     span:nth-child(1) {
-                        font-size: 1.8vh;
+                        font-size: 1.48145vh;
                         padding: 0 0.5vh;
                         border: 1px rgba(18, 214, 97, 1) solid;
                         border-radius: 0.5vh;
@@ -1623,7 +1645,7 @@
                 .tit_down {
                     color: rgba(255, 66, 66, 1);
                     span:nth-child(1) {
-                        font-size: 1.8vh;
+                        font-size: 1.48145vh;
                         padding: 0 0.5vh;
                         border: 1px rgba(255, 66, 66, 1) solid;
                         border-radius: 0.5vh;
@@ -1651,7 +1673,7 @@
                 line-height: 3.5vh;
                 display: flex;
                 color: #71D3FF;
-                font-size: 2vh;
+                font-size: 1.85185vh;
                 width: 15vh;
                 font-weight: 700;
                 margin: auto;
@@ -1725,7 +1747,7 @@
                         .date_value {
                             position: absolute;
                             text-align: center;
-                            font-size: 2vh;
+                            font-size: 1.851852vh;
                             width: 6vh;
                             color: #0696FC;
                             margin-left: -2.5vh;

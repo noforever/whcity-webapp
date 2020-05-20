@@ -22,6 +22,17 @@ export default new Router({
       ]
     },
       {
+          path:'/car-development',
+          component: BaseLayout,
+          children:[
+              {
+                  name:'car-development',
+                  path:'/car-development',
+                  component:resolve => require(['@/page/car-development'], resolve)
+              },
+          ]
+      },
+      {
           path:'/industrial-development',
           component: BaseLayout,
           children:[
