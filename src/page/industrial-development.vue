@@ -355,6 +355,7 @@
                 cursor: pointer;
                 right: 4vh;
                 border-radius: 0.1vh;
+                background: linear-gradient(top, #1E70D3, #0498FF);
                 background: -moz-linear-gradient(top, #1E70D3, #0498FF);
             }
         }

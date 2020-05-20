@@ -153,6 +153,7 @@
                 font-size: 4vh;
                 line-height: 7vh;
                 text-align: left;
+                background-image:linear-gradient(bottom, #58686b, #D6EFFC, #fff);
                 background-image: -webkit-linear-gradient(bottom, #58686b, #D6EFFC, #fff);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -181,6 +182,7 @@
                     margin-top: 3vh;
                     width: 75%;
                     transform: skew(-15deg);
+                    background: linear-gradient(top, #12408C, #2C67CA);
                     background: -moz-linear-gradient(top, #12408C, #2C67CA);
                     .nav_btn {
                         width: 15%;
@@ -201,6 +203,7 @@
                         color: #fff;
                     }
                     .nav_btn_active {
+                        background: linear-gradient(top, #1E70D3, #0498FF);
                         background: -moz-linear-gradient(top, #1E70D3, #0498FF);
                         color: #fff;
                         .nav_btn_in {
@@ -222,6 +225,7 @@
                 width: 25%;
                 height: 5vh;
                 margin-top: 3vh;
+                background: linear-gradient(top, #12408C, #2C67CA);
                 background: -moz-linear-gradient(top, #12408C, #2C67CA);
                 transform: skew(-15deg);
                 p {

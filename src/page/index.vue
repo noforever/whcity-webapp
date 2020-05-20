@@ -208,7 +208,7 @@
                 img_url: car,
                 map_ind: 0,
                 dateList: [{id: 0, date: '2016'}, {id: 1, date: '2017'}, {id: 2, date: '2018'}, {id: 3, date: '2019'}, {id: 4, date: '2020'}],
-                date_style: 'width:200px',
+                date_style: '',
                 date_style1: 'width:0px',
                 pointInd: 0,
                 overview_name: '',
@@ -240,9 +240,11 @@
             this.img_url = this.img_list[this.line_act]
             this.overview_name = this.overviewValue[this.line_act].name
             this.overview_pie(this.overviewValue[0].value)
-            setInterval(() => {
+            var interval =  setInterval(() => {
                 if(this.$route.path == '/index'){
                     this.overviewChange()
+                }else{
+                    clearInterval(interval )
                 }
             }, 8000)
             this.left_chart1()
