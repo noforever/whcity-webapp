@@ -28,8 +28,6 @@
 <script>
     // import echarts from 'echarts';
     // import {config} from '../utils/chartConfig'
-    import 'font-awesome/css/font-awesome.min.css'
-
     export default {
         name: "industrial-next",
         data() {
@@ -78,13 +76,13 @@
         .ne_chart {
             height: 57vh;
             width: 60vw;
-            background-image: url('../../static/img/bg.png');
+            background-image: url('../assets/img/bg.png');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             .ne_chart1 {
                 height: 100%;
                 width: 100%;
-                background-image: url('../../static/img/industrial/bk1.png');
+                background-image: url('../assets/img/industrial/bk1.png');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
                 .ne_title {
@@ -95,7 +93,7 @@
                     text-align: center;
                     color: #32F1FE;
                     font-weight: 600;
-                    background-image: url('../../static/img/industrial/det_ioc.png');
+                    background-image: url('../assets/img/industrial/det_ioc.png');
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     .it_close {

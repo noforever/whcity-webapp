@@ -179,15 +179,15 @@
     import echarts from 'echarts';
     import {config} from '../utils/chartConfig'
     import wuhan from '../utils/wuhan.json';
-    import it_up from '../../static/img/industrial/md_u.png';
-    import it_center from '../../static/img/industrial/md_c.png';
-    import it_down from '../../static/img/industrial/md_d.png';
-    import dot_1 from '../../static/img/industrial/dot-1.png';
-    import dot_2 from '../../static/img/industrial/dot-2.png';
-    import dot_3 from '../../static/img/industrial/dot-3.png';
-    import tc_left from '../../static/img/industrial/tc_left.png';
-    import tc_right from '../../static/img/industrial/tc_right.png';
-    import df from '../../static/img/industrial/df.png';
+    import it_up from '../assets/img/industrial/md_u.png';
+    import it_center from '../assets/img/industrial/md_c.png';
+    import it_down from '../assets/img/industrial/md_d.png';
+    import dot_1 from '../assets/img/industrial/dot-1.png';
+    import dot_2 from '../assets/img/industrial/dot-2.png';
+    import dot_3 from '../assets/img/industrial/dot-3.png';
+    import tc_left from '../assets/img/industrial/tc_left.png';
+    import tc_right from '../assets/img/industrial/tc_right.png';
+    import df from '../assets/img/industrial/df.png';
 
     export default {
         name: "car-development",
@@ -746,7 +746,7 @@
                     line-height: 4.5vh;
                     color: #1BC0F3;
                     text-align: center;
-                    background-image: url('../../static/img/industrial/det_ioc.png');
+                    background-image: url('../assets/img/industrial/det_ioc.png');
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                 }
@@ -765,17 +765,17 @@
                         height: 3vh;
                     }
                     .leg_ioc1{
-                        background-image: url('../../static/img/industrial/md_u.png');
+                        background-image: url('../assets/img/industrial/md_u.png');
                         background-repeat: no-repeat;
                         background-size: 100% 100%;
                     }
                     .leg_ioc2{
-                        background-image: url('../../static/img/industrial/md_c.png');
+                        background-image: url('../assets/img/industrial/md_c.png');
                         background-repeat: no-repeat;
                         background-size: 100% 100%;
                     }
                     .leg_ioc3{
-                        background-image: url('../../static/img/industrial/md_d.png');
+                        background-image: url('../assets/img/industrial/md_d.png');
                         background-repeat: no-repeat;
                         background-size: 100% 100%;
                     }
@@ -832,19 +832,19 @@
                         line-height: 4.6vh;
                         text-align: left;
                         cursor: pointer;
-                        background-image: url('../../static/img/industrial/tab_btn.png');
+                        background-image: url('../assets/img/industrial/tab_btn.png');
                         background-repeat: no-repeat;
                         background-size: 100% 100%;
                     }
                     .car_info_btn:hover {
                         color: #fff;
-                        background-image: url('../../static/img/industrial/tab_act.png');
+                        background-image: url('../assets/img/industrial/tab_act.png');
                         background-repeat: no-repeat;
                         background-size: 100% 100%;
                     }
                     .car_info_btn_act {
                         color: #fff;
-                        background-image: url('../../static/img/industrial/tab_act.png');
+                        background-image: url('../assets/img/industrial/tab_act.png');
                         background-repeat: no-repeat;
                         background-size: 100% 100%;
                     }

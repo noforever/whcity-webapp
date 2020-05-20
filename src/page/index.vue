@@ -40,7 +40,7 @@
                         <div class="overview ">
                             <div class="overview_img">
                                 <div style="margin: auto;text-align: center;margin-top: 2.5vh">
-                                    <el-image class="it_img" :src="img_url">
+                                    <el-image class="it_img" :src="img_url"  @click="overviewInfo(img_url)">
                                     </el-image>
                                 </div>
                             </div>
@@ -182,15 +182,15 @@
 </template>
 
 <script>
-    import car from '../../static/img/development/car.png';
-    import dianlu from '../../static/img/development/dianlu.png';
-    import guangdianzi from '../../static/img/development/guangdianzi.png';
-    import hangkong from '../../static/img/development/hangkong.png';
-    import jiankang from '../../static/img/development/jiankang.png';
-    import shuzi from '../../static/img/development/shuzi.png';
-    import xinnengyuan from '../../static/img/development/xinnengyuan.png';
-    import zhineng from '../../static/img/development/zhineng.png';
-    import dot_1 from '../../static/img/industrial/dot-1.png';
+    import car from '../assets/img/development/car.png';
+    import dianlu from '../assets/img/development/dianlu.png';
+    import guangdianzi from'../assets/img/development/guangdianzi.png';
+    import hangkong from '../assets/img/development/hangkong.png';
+    import jiankang from '../assets/img/development/jiankang.png';
+    import shuzi from '../assets/img/development/shuzi.png';
+    import xinnengyuan from'../assets/img/development/xinnengyuan.png';
+    import zhineng from '../assets/img/development/zhineng.png';
+    import dot_1 from'../assets/img/industrial/dot-1.png';
     import echarts from 'echarts';
     import {config} from '../utils/chartConfig'
     import wuhan from '../utils/wuhan.json';
@@ -244,7 +244,7 @@
                 if(this.$route.path == '/index'){
                     this.overviewChange()
                 }
-            }, 4000)
+            }, 8000)
             this.left_chart1()
             this.left_chart2()
             this.right_chart1()
@@ -258,6 +258,11 @@
             },
             industryChange(val) {
                 this.map_ind = val
+            },
+            overviewInfo(img){
+                if(img == this.img_list[0]){
+                    this.$router.push('/car-development')
+                }
             },
             overviewChange() {
                 if (this.line_act == 7) {
@@ -1557,6 +1562,7 @@
                     .it_img {
                         height: 11vh;
                         width: 11vh;
+                        cursor: pointer;
                     }
                 }
                 .overview_btn {
@@ -1564,7 +1570,7 @@
                     height: 16vh;
                     margin-top: 3vh;
                     cursor: pointer;
-                    background-image: url('../../static/img/development/xian.png');
+                    background-image: url('../assets/img/development/xian.png');
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                 }
@@ -1777,7 +1783,7 @@
                             top: 0.4vh;
                             position: absolute;
                             text-align: center;
-                            font-size: 2vh;
+                            font-size: 1.851852vh;
                             width: 6vh;
                             color: #fff;
                             margin-left: -2.5vh;

@@ -360,7 +360,7 @@
         }
         .ind_info {
             height: 27vh;
-            background-image: url('../../static/img/industrial/bk1.png');
+            background-image: url('../assets/img/industrial/bk1.png');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             .info_tit {
@@ -409,7 +409,7 @@
                     text-align: center;
                     font-size: 5.55555556vh;
                     color: #FFF100;
-                    background-image: url('../../static/img/industrial/bk_ioc.png');
+                    background-image: url('../assets/img/industrial/bk_ioc.png');
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                 }

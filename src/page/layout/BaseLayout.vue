@@ -9,37 +9,37 @@
                 </div>
                 <div class="navigation">
                     <div class="nav_btns">
-                        <div class="nav_btn" :class="navIndex == 0?'nav_btn_active':''"  @click="navChange(0)">
+                        <div class="nav_btn" :class="navIndex == 0?'nav_btn_active':''" @click="navChange(0)">
                             <div class="nav_btn_in">
                                 <p>首页</p>
                             </div>
                         </div>
-                        <div class="nav_btn" :class="navIndex == 1?'nav_btn_active':''"  @click="navChange(1)">
+                        <div class="nav_btn" :class="navIndex == 1?'nav_btn_active':''" @click="navChange(1)">
                             <div class="nav_btn_in">
                                 <p>数据汇聚</p>
                             </div>
                         </div>
-                        <div class="nav_btn" :class="navIndex == 2?'nav_btn_active':''"  @click="navChange(2)">
+                        <div class="nav_btn" :class="navIndex == 2?'nav_btn_active':''" @click="navChange(2)">
                             <div class="nav_btn_in">
                                 <p>经济运行</p>
                             </div>
                         </div>
-                        <div class="nav_btn" :class="navIndex == 3?'nav_btn_active':''"  @click="navChange(3)">
+                        <div class="nav_btn" :class="navIndex == 3?'nav_btn_active':''" @click="navChange(3)">
                             <div class="nav_btn_in">
                                 <p>空间规划</p>
                             </div>
                         </div>
-                        <div class="nav_btn" :class="navIndex == 4?'nav_btn_active':''"  @click="navChange(4)">
+                        <div class="nav_btn" :class="navIndex == 4?'nav_btn_active':''" @click="navChange(4)">
                             <div class="nav_btn_in">
                                 <p>城市治理</p>
                             </div>
                         </div>
-                        <div class="nav_btn" :class="navIndex == 5?'nav_btn_active':''"  @click="navChange(5)">
+                        <div class="nav_btn" :class="navIndex == 5?'nav_btn_active':''" @click="navChange(5)">
                             <div class="nav_btn_in">
                                 <p>城市服务</p>
                             </div>
                         </div>
-                        <div class="nav_btn" :class="navIndex == 6?'nav_btn_active':''"  @click="navChange(6)">
+                        <div class="nav_btn" :class="navIndex == 6?'nav_btn_active':''" @click="navChange(6)">
                             <div class="nav_btn_in">
                                 <p>产业发展</p>
                             </div>
@@ -61,39 +61,39 @@
         data() {
             return {
                 nav: [
-                    {title: '首页', path: '/index'},
+                    {title: '首页', path: ''},
                     {title: '数据汇聚', path: ''},
                     {title: '经济运行', path: ''},
                     {title: '空间规划', path: ''},
                     {title: '城市治理', path: ''},
                     {title: '城市服务', path: ''},
-                    {title: '产业发展', path: '/car-development'},
+                    {title: '产业发展', path: '/index'},
                 ],
-                navIndex: 0,
+                navIndex: 6,
                 title: '宏观经济运行',
                 isCollapse: false
             }
         },
         methods: {
             navChange(val) {
-                this.navIndex = val
-                if(this.nav[val].path!=''){
+                if (this.nav[val].path != '') {
+                    this.navIndex = val
                     this.$router.push(this.nav[val].path)
                 }
             },
-            routerLink(index, path) {
-                if (index != 3) {
-                    this.navIndex = index;
-                    this.$router.push(path)
-                }
-                //this.threeGo()
-            },
+            // routerLink(index, path) {
+            //     if (index != 3) {
+            //         this.navIndex = index;
+            //         this.$router.push(path)
+            //     }
+            //     //this.threeGo()
+            // },
             currentPage() {
                 for (let i = 0; i < this.nav.length; i++) {
                     if (this.nav[i].path == this.$route.path) {
                         this.navIndex = i;
                     }
-                    if(this.$route.path == '/industrial-development'){
+                    if (this.$route.path == '/industrial-development' || this.$route.path == '/car-development') {
                         this.navIndex = 6;
                     }
                 }
@@ -104,13 +104,13 @@
                     if (this.nav[i].path == path) {
                         this.navIndex = i;
                     }
-                    if(path == '/industrial-development'){
+                    if (path == '/industrial-development' || path == '/car-development') {
                         this.navIndex = 6;
                     }
                 }
-               //this. currentPage()
+                //this. currentPage()
 
-             //console.log(path,"path")
+                //console.log(path,"path")
             },
 
 
@@ -153,9 +153,9 @@
                 font-size: 4vh;
                 line-height: 7vh;
                 text-align: left;
-                background-image:-webkit-linear-gradient(bottom,#58686b,#D6EFFC,#fff);
-                -webkit-background-clip:text;
-                -webkit-text-fill-color:transparent;
+                background-image: -webkit-linear-gradient(bottom, #58686b, #D6EFFC, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
                 font-weight: 800;
                 letter-spacing: 0.5vh;
                 .title2 {
@@ -166,7 +166,7 @@
                     top: -3.8vh;
                     height: 6vh;
                     width: 70%;
-                    background-image: url('../../../static/img/title.png');
+                    background-image: url('../../assets/img/title.png');
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                 }
